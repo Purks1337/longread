@@ -6,15 +6,17 @@ export default function Header() {
       <div className="text-2xl font-black tracking-tighter text-[#D91E12] mix-blend-difference font-headline uppercase">
         FORWARD
       </div>
-      <nav className="hidden md:flex gap-8 items-center h-full">
-        <Link className="font-headline uppercase tracking-tighter font-bold text-[#D91E12] border-b-4 border-[#D91E12] pb-1 mix-blend-difference hover:scale-105 duration-150" href="/">ГЛАВА 1</Link>
-        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="#">ГЛАВА 2</Link>
-        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="#">ГЛАВА 3</Link>
-        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="#">ГЛАВА 4</Link>
-        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="#">ГЛАВА 6</Link>
-        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="#">ЭПИЛОГ</Link>
+      {/* Полная навигация: от Пролога до Эпилога */}
+      <nav className="hidden lg:flex gap-6 xl:gap-8 items-center h-full">
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/">ПРОЛОГ</Link>
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/chapter-1">ГЛАВА 1</Link>
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/chapter-2">ГЛАВА 2</Link>
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/chapter-3">ГЛАВА 3</Link>
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/chapter-4">ГЛАВА 4</Link>
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/chapter-5">ГЛАВА 5</Link>
+        <Link className="font-headline uppercase tracking-tighter font-bold text-on-surface dark:text-[#E5E2E1] opacity-70 hover:opacity-100 hover:text-[#D91E12] transition-colors mix-blend-difference hover:scale-105 duration-150" href="/epilogue">ЭПИЛОГ</Link>
       </nav>
-      <button className="md:hidden text-primary-container">
+      <button className="lg:hidden text-primary-container">
         <span className="material-symbols-outlined">menu</span>
       </button>
     </header>
