@@ -1,26 +1,116 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Настройка цветов и шрифтов (Вместо tailwind.config.ts) */
+@theme {
+  --color-surface: #131313;
+  --color-on-background: #e5e2e1;
+  --color-on-surface-variant: #e7bdb6;
+  --color-on-primary: #690000;
+  --color-error: #ffb4ab;
+  --color-surface-container: #201f1f;
+  --color-surface-dim: #131313;
+  --color-on-secondary-fixed: #1b1c1a;
+  --color-secondary-fixed-dim: #c7c6c4;
+  --color-secondary-container: #464745;
+  --color-surface-container-highest: #353534;
+  --color-surface-variant: #353534;
+  --color-inverse-surface: #e5e2e1;
+  --color-error-container: #93000a;
+  --color-surface-tint: #ffb4a8;
+  --color-inverse-primary: #c00000;
+  --color-surface-container-low: #1c1b1b;
+  --color-outline-variant: #5d3f3b;
+  --color-primary-container: #d91e12;
+  --color-secondary: #c7c6c4;
+  --color-on-primary-container: #ffefed;
+  --color-on-secondary: #2f312f;
+  --color-on-tertiary: #002f65;
+  --color-background: #131313;
+  --color-secondary-fixed: #e3e2df;
+  --color-primary: #ffb4a8;
+  --color-tertiary-container: #006cd9;
+  --color-on-secondary-fixed-variant: #464745;
+  --color-on-error: #690005;
+  --color-on-tertiary-fixed: #001b3f;
+  --color-on-surface: #e5e2e1;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-tertiary: #abc7ff;
+  --color-on-tertiary-container: #eff2ff;
+  --color-primary-fixed-dim: #ffb4a8;
+  --color-on-primary-fixed-variant: #930000;
+  --color-primary-fixed: #ffdad4;
+  --color-tertiary-fixed-dim: #abc7ff;
+  --color-surface-bright: #3a3939;
+  --color-on-primary-fixed: #410000;
+  --color-on-error-container: #ffdad6;
+  --color-inverse-on-surface: #313030;
+  --color-on-secondary-container: #b5b5b2;
+  --color-tertiary-fixed: #d7e3ff;
+  --color-outline: #ad8882;
+  --color-surface-container-high: #2a2a2a;
+  --color-on-tertiary-fixed-variant: #00458f;
+
+  --font-headline: var(--font-space), sans-serif;
+  --font-body: var(--font-newsreader), serif;
+  --font-label: var(--font-space), sans-serif;
+
+  /* Убираем скругления, чтобы всё было квадратным (брутализм) */
+  --radius: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  .grain-overlay {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8fWfVYfsv8kYNHnwYtRbDOB7ydDiuxOFKRM0WnuLeg9In-fyj5-psPOx8_F6DNjNJBArCpJbUyZkkKXw9Oj03deAJD2yUM6nxo3F1XShegexFEFzpfO6fN0d1ntlDjxKcowjx7KZgo70l3Kmwgzt7L-tb3SLRjExsRVHtlFrPE1aE0jf4oA4KCPNBMKYw4z3tt1Gyhnk1q3oulYJELlHUKrNBNWZI5hy_HbSGB5omQkLJgZJXk5ldu-Lp-429AHqOKdSoCzNMqyA");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  .grunge-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px var(--color-primary-container);
+    color: transparent;
+  }
+
+  .brutalist-shadow {
+    box-shadow: 8px 8px 0px var(--color-primary-container);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  .polaroid-tape {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 100px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
 }
