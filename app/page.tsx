@@ -1,17 +1,4 @@
 export default function Home() {
-  const partnerLogos = [
-    { src: "/materials/логотипы/Форвард.png", alt: "Форвард" },
-    { src: "/materials/логотипы/Департамент 1.png", alt: "Департамент образования" },
-    { src: "/materials/логотипы/Дворец 1.png", alt: "Городской дворец творчества" },
-    { src: "/materials/логотипы/МедиаГород 1.png", alt: "Медиагород" },
-    { src: "/materials/логотипы/опера балет.png", alt: "Урал опера балет" },
-    { src: "/materials/логотипы/Форвард.png", alt: "Форвард" },
-    { src: "/materials/логотипы/Департамент 1.png", alt: "Департамент образования" },
-    { src: "/materials/логотипы/Дворец 1.png", alt: "Городской дворец творчества" },
-    { src: "/materials/логотипы/МедиаГород 1.png", alt: "Медиагород" },
-    { src: "/materials/логотипы/опера балет.png", alt: "Урал опера балет" },
-  ];
-
   return (
     <main className="-mt-16">
       {/* Full-page Hero Section */}
@@ -76,36 +63,6 @@ export default function Home() {
           </div>
         </div>
 
-
-        {/* Partners carousel */}
-        <div className="absolute bottom-10 left-0 right-0 z-30">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="border-y border-primary-container/30 bg-surface/30 backdrop-blur-md overflow-hidden">
-              <div className="flex gap-16 py-4 items-center whitespace-nowrap animate-[marquee_22s_linear_infinite]">
-                {partnerLogos.map((logo, idx) => (
-                  <img
-                    key={`${logo.src}-${idx}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-10 w-auto object-contain opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition"
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <style>{`
-          @keyframes marquee {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-        `}</style>
       </section>
 
          </main>

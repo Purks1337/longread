@@ -113,4 +113,17 @@
     backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.05);
   }
+
+  @keyframes ftMarquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ft-marquee {
+    animation: ftMarquee 22s linear infinite;
+  }
 }
