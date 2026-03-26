@@ -26,14 +26,15 @@ export default function ChapterTwo() {
             {/* Video Block 2 */}
             <div className="lg:col-span-7 relative">
               <div className="aspect-video bg-surface-container-highest brutalist-shadow relative group overflow-hidden">
-                <video
-                  className="w-full h-full object-cover"
-                  src="/materials/Видео/Видео №2.mp4"
-                  controls
-                  preload="metadata"
-                  playsInline
-                  poster="/materials/фоторепортаж/Оркестровая яма/1.JPG"
-                />
+                <div className="relative pt-[56.25%] w-full h-full">
+                  <iframe
+                    src="https://kinescope.io/embed/qdHWCVqt6wsKDPqjxPyzdQ"
+                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allowFullScreen
+                    title="Видео №2"
+                  />
+                </div>
                 <div className="absolute bottom-4 left-4 bg-surface px-4 py-2 font-headline font-bold text-primary-container uppercase tracking-tighter">
                   Видеo №2
                 </div>
@@ -95,13 +96,15 @@ export default function ChapterTwo() {
                 {/* Video Block 3 */}
                 <div className="sticky top-24">
                   <div className="aspect-[3/4] bg-surface relative brutalist-shadow overflow-hidden group">
-                    <video
-                      className="w-full h-full object-cover opacity-90"
-                      src="/materials/Видео/видео №3.mp4"
-                      controls
-                      preload="metadata"
-                      playsInline
-                    />
+                    <div className="relative pt-[56.25%] w-full h-full">
+                      <iframe
+                        src="https://kinescope.io/embed/k9WuUx8GVom4z98p1VRAkL"
+                        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                        className="absolute top-0 left-0 w-full h-full border-0"
+                        allowFullScreen
+                        title="Видео №3"
+                      />
+                    </div>
                     <div className="absolute top-0 right-0 p-4">
                       <div className="bg-primary-container text-on-primary-container px-6 py-2 font-headline font-black text-xl uppercase tracking-tighter shadow-lg">
                         ВИДЕО №3

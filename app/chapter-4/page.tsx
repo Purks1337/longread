@@ -51,14 +51,15 @@ export default function ChapterFour() {
         {/* Video Block */}
         <section className="mb-40">
           <div className="bg-surface-container shadow-[20px_20px_0px_#D91E12] relative aspect-video group cursor-pointer overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              src="/materials/Видео/видео №4.mp4"
-              controls
-              preload="metadata"
-              playsInline
-              poster="/materials/фоторепортаж/закулисье/2.JPG"
-            />
+            <div className="relative pt-[56.25%] w-full h-full">
+              <iframe
+                src="https://kinescope.io/embed/44eV2ToUU8nNc3GK9KbHBo"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allowFullScreen
+                title="Видео №4"
+              />
+            </div>
             <div className="absolute top-8 left-8">
               <h3 className="text-4xl font-black font-headline uppercase bg-surface p-2 border-l-4 border-primary-container">
                 ВИДЕО №4

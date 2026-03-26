@@ -36,14 +36,15 @@ export default function ChapterFive() {
       {/* Видео №5 */}
       <section className="max-w-7xl mx-auto px-6 mb-32">
         <div className="bg-surface-container-highest brutalist-shadow relative group cursor-pointer overflow-hidden aspect-video border-4 border-[#131313]">
-          <video
-            className="w-full h-full object-cover"
-            src="/materials/Видео/Видео №5.mp4"
-            controls
-            preload="metadata"
-            playsInline
-            poster="/materials/фоторепортаж/герои/Мария Шляпникова.JPG"
-          />
+          <div className="relative pt-[56.25%] w-full h-full">
+            <iframe
+              src="https://kinescope.io/embed/hCW6bWWrx6h17AMzMnmk1w"
+              allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+              className="absolute top-0 left-0 w-full h-full border-0"
+              allowFullScreen
+              title="Видео №5"
+            />
+          </div>
           <div className="absolute top-6 left-6 bg-surface px-4 py-2 font-headline font-black text-primary-container text-2xl uppercase tracking-tighter border-l-4 border-primary-container">
             ВИДЕО №5
           </div>

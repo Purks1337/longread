@@ -226,14 +226,15 @@ export default function ChapterOne() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-8 relative">
               <div className="aspect-video bg-surface shadow-[12px_12px_0px_#D91E12] border-2 border-[#131313] relative overflow-hidden">
-                <video
-                  className="w-full h-full object-cover"
-                  src="/materials/Видео/Видео №1.mp4"
-                  controls
-                  preload="metadata"
-                  playsInline
-                  poster="/materials/фоторепортаж/История Театра/1.jpg"
-                />
+                <div className="relative pt-[56.25%] w-full h-full">
+                  <iframe
+                    src="https://kinescope.io/embed/cgen6X26cNYT5M7EqRkUWd"
+                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allowFullScreen
+                    title="Видео №1"
+                  />
+                </div>
                 <div className="absolute top-0 left-0 w-full h-full border-[20px] border-surface pointer-events-none opacity-20"></div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary-container text-on-primary-container px-6 py-3 font-headline font-black text-2xl uppercase italic">
