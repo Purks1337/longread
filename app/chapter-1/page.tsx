@@ -1,5 +1,91 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
+
+import { useMemo, useState } from "react";
+
+type TimelineItem = {
+  id: string;
+  marker: string;
+  title: string;
+  period: string;
+  description: string;
+  photoLabel: string;
+};
+
 export default function ChapterOne() {
-    return (
+  const items: TimelineItem[] = useMemo(
+    () => [
+      {
+        id: "foundation-1910-1912",
+        marker: "01",
+        period: "1910—1912",
+        title: "Основание и строительство (1910–1912)",
+        description:
+          "Идея строительства каменного здания театра возникла после пожара деревянного театра-цирка. Проект был утвержден в 1910 году, а уже 12 октября 1912 года состоялась торжественная премьера — опера М. И. Глинки «Жизнь за царя» («Иван Сусанин»).",
+        photoLabel: "Фото 1",
+      },
+      {
+        id: "altschuller-barbini-1912-1913",
+        marker: "02",
+        period: "1912—1913",
+        title: "Первые имена: режиссёр и дирижёр",
+        description:
+          "Первым главным режиссером театра стал Александр Альтшуллер, а главным дирижером - известный итальянец Сильвио Барбини. К сожалению, через год - 18 октября 1913 года - Барбини умер от остановки сердца и был похоронен на екатеринбургском кладбище. Интересно, что свою трудовую деятельность на должности рассыльного оперного театра начинал 9-летний Григорий Александров - будущий режиссер известных советских музыкальных комедий.",
+        photoLabel: "Фото 2",
+      },
+      {
+        id: "soviet-return-1919-1924",
+        marker: "03",
+        period: "1919—1924",
+        title: "Возвращение культурной роли (1919–1924)",
+        description:
+          "После бурь революции, затрагивавших театр, в советское время (с 1919 года) театр вновь стал выполнять свою культурную роль. В нем по-прежнему ставились оперы и балет. В 1922 году была создана балетная труппа. Её первым спектаклем стала «Коппелия» французского композитора Лео Делиба. Дровяную площадь, на которой стоял театр, после установления советской власти переименовали в площадь Парижской Коммуны. С 1924 года эта обитель культуры называется Государственным оперным театром имени А.В. Луначарского.",
+        photoLabel: "Фото 3",
+      },
+      {
+        id: "ww2-1939-1945",
+        marker: "04",
+        period: "1941—1945",
+        title: "Театр в годы Великой Отечественной войны",
+        description:
+          "Театр не прекращал работу даже в трудные годы Великой Отечественной войны. Часть коллектива ушла на фронт, а остальные работали без выходных. За пять военных лет они дали более 4 тысяч спектаклей: в городе, на фронтах, в госпиталях. На заработанные выступлениями деньги коллектив театра купил для фронта три танка, а также совершал перечисления в фонд обороны.",
+        photoLabel: "Фото 4",
+      },
+      {
+        id: "soviet-1920s-ww2",
+        marker: "05",
+        period: "1920—1940-е",
+        title: "Советский период: репертуар и эвакуация",
+        description:
+          "Советский период: В 1920–30-е годы театр стал центром классического репертуара. В годы Великой Отечественной войны здесь выступали артисты эвакуированного Большого театра СССР, включая Майю Плисецкую.",
+        photoLabel: "Фото 5",
+      },
+      {
+        id: "awards-reconstruction-1946-1987",
+        marker: "06",
+        period: "1946—1987",
+        title: "Премии, орден, статус и реконструкция",
+        description:
+          "В 1946 и 1987 году театр удостаивался Государственной премии СССР. В 1962 году он был награждён орденом Трудового Красного Знамени. В 1966 году театр стал академическим. В конце 1970-х была выполнена реконструкция театра. Он был значительно расширен за счет заднего пристроя.",
+        photoLabel: "Фото 6",
+      },
+      {
+        id: "jubilee-2011-2012",
+        marker: "07",
+        period: "2011—2012",
+        title: "Юбилей и возвращение исторического облика",
+        description:
+          "К юбилею Оперного театра в 2011-12 гг. была проведена реконструкция, в ходе которой строители постарались вернуть театру его исторический облик. Главной премьерой юбилейного 100-го сезона театра стала опера М.Мусоргского «Борис Годунов».",
+        photoLabel: "Фото 7",
+      },
+    ],
+    []
+  );
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = items[activeIndex];
+
+  return (
       <main className="pt-24 bg-[#f4f3f0] text-[#131313] min-h-screen">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-6 py-12 md:py-24">
@@ -41,67 +127,91 @@ export default function ChapterOne() {
             <div className="relative pb-20">
               <div className="absolute top-1/2 left-0 w-full h-1 bg-surface-container-highest -translate-y-1/2"></div>
               <div className="flex justify-between items-center relative z-10">
-                
-                {/* Marker 1: Active */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-primary-container border-4 border-surface shadow-[4px_4px_0px_#E5E2E1] flex items-center justify-center mb-6">
-                    <span className="font-headline font-black text-on-primary-container">01</span>
-                  </div>
-                  <span className="font-headline font-bold text-sm uppercase tracking-widest text-primary-container">1910—1912</span>
-                </div>
-  
-                {/* Marker 2 */}
-                <div className="flex flex-col items-center opacity-40 hover:opacity-100 transition-opacity cursor-pointer group">
-                  <div className="w-12 h-12 bg-surface-container-high border-2 border-surface flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-                    <span className="font-headline font-bold text-on-surface group-hover:text-on-primary-container">02</span>
-                  </div>
-                  <span className="font-headline font-bold text-sm uppercase tracking-widest">1924</span>
-                </div>
-  
-                {/* Marker 3 */}
-                <div className="flex flex-col items-center opacity-40 hover:opacity-100 transition-opacity cursor-pointer group">
-                  <div className="w-12 h-12 bg-surface-container-high border-2 border-surface flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-                    <span className="font-headline font-bold text-on-surface group-hover:text-on-primary-container">03</span>
-                  </div>
-                  <span className="font-headline font-bold text-sm uppercase tracking-widest">1945</span>
-                </div>
-  
-                {/* Marker 4 */}
-                <div className="flex flex-col items-center opacity-40 hover:opacity-100 transition-opacity cursor-pointer group">
-                  <div className="w-12 h-12 bg-surface-container-high border-2 border-surface flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-                    <span className="font-headline font-bold text-on-surface group-hover:text-on-primary-container">04</span>
-                  </div>
-                  <span className="font-headline font-bold text-sm uppercase tracking-widest">1982</span>
-                </div>
-  
-                {/* Marker 5 */}
-                <div className="flex flex-col items-center opacity-40 hover:opacity-100 transition-opacity cursor-pointer group">
-                  <div className="w-12 h-12 bg-surface-container-high border-2 border-surface flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
-                    <span className="font-headline font-bold text-on-surface group-hover:text-on-primary-container">05</span>
-                  </div>
-                  <span className="font-headline font-bold text-sm uppercase tracking-widest">2023</span>
-                </div>
+                {items.map((item, idx) => {
+                  const isActive = idx === activeIndex;
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => setActiveIndex(idx)}
+                      className={[
+                        "flex flex-col items-center cursor-pointer group transition-opacity",
+                        isActive ? "opacity-100" : "opacity-40 hover:opacity-100",
+                      ].join(" ")}
+                      aria-current={isActive ? "step" : undefined}
+                      aria-label={`${item.marker}. ${item.title}`}
+                    >
+                      <div
+                        className={[
+                          "flex items-center justify-center mb-6 transition-colors",
+                          isActive
+                            ? "w-16 h-16 bg-primary-container border-4 border-surface shadow-[4px_4px_0px_#E5E2E1]"
+                            : "w-12 h-12 bg-surface-container-high border-2 border-surface group-hover:bg-primary-container",
+                        ].join(" ")}
+                      >
+                        <span
+                          className={[
+                            "font-headline font-bold",
+                            isActive
+                              ? "text-on-primary-container font-black"
+                              : "text-on-surface group-hover:text-on-primary-container",
+                          ].join(" ")}
+                        >
+                          {item.marker}
+                        </span>
+                      </div>
+                      <span
+                        className={[
+                          "font-headline font-bold text-sm uppercase tracking-widest",
+                          isActive ? "text-primary-container" : "",
+                        ].join(" ")}
+                      >
+                        {item.period}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
   
               {/* Active Content Detail */}
               <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-0 border-4 border-primary-container shadow-[12px_12px_0px_#D91E12]">
-                <div className="relative h-[400px] bg-surface-container">
-                  <img 
-                    className="w-full h-full object-cover grayscale contrast-125 brightness-75 mix-blend-luminosity" 
-                    alt="Historical photo of theatre construction" 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOluWONumoD3UK0rwIhb3JL_u9sym3tcinOBOQ5d4n2Z6mksGqTOe0rve3FvFTlDQ4CmPhe7UcyywEsDeldzf_ZRulPUNl-8Pn48w5wQaGeJUb6mwfcq_bd_bxcKRBKFzpkanB0jhMUZXYfL-33M-4gPPwJih9gTD1vwWu2ukVIAAoR1mL7p2zoXbCedOTdGMU1MMhjpW2a7ocwgNcGBMp--sldpNF9i56FNynmcBOUJR4cs2CY5sDgGUXj7lHEpSZ_N4USfDKmLg"
-                  />
-                  <div className="absolute inset-0 bg-primary-container/20"></div>
-                  <div className="absolute bottom-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 text-xs font-headline font-bold uppercase">Архив: 1910-A</div>
+                <div className="relative h-[400px] bg-surface-container overflow-hidden">
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(217,30,18,0.20),rgba(0,0,0,0.65))]"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="font-headline font-black text-6xl md:text-7xl tracking-tighter text-[#E5E2E1] mix-blend-screen">
+                        {active.photoLabel}
+                      </div>
+                      <div className="mt-3 font-headline font-bold uppercase tracking-widest text-[#E5E2E1]/70 text-sm">
+                        Архивный материал
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 text-xs font-headline font-bold uppercase">
+                    {active.photoLabel}
+                  </div>
                 </div>
                 <div className="p-12 bg-surface flex flex-col justify-center">
-                  <h3 className="font-headline font-black text-5xl uppercase tracking-tighter mb-6 leading-none">ОСНОВАНИЕ И СТРОИТЕЛЬСТВО (1910–1912)</h3>
-                  <p className="font-body text-xl text-on-surface/80 leading-relaxed mb-8">
-                    Проект здания в стиле неоренессанс был разработан архитектором Владимиром Семёновым. Строительство велось на средства меценатов и городской казны, став символом технического и культурного прогресса Екатеринбурга.
-                  </p>
-                  <button className="self-start px-8 py-4 bg-primary-container text-on-primary-container font-headline font-bold uppercase tracking-widest shadow-[4px_4px_0px_#E5E2E1] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
-                    ЧИТАТЬ ДАЛЕЕ
-                  </button>
+                  <h3 className="font-headline font-black text-5xl uppercase tracking-tighter mb-6 leading-none">
+                    {active.title}
+                  </h3>
+                  <p className="font-body text-xl text-on-surface/80 leading-relaxed mb-8">{active.description}</p>
+                  <div className="flex items-center gap-4">
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex((i) => (i - 1 + items.length) % items.length)}
+                      className="px-6 py-4 bg-surface-container-high text-on-surface font-headline font-bold uppercase tracking-widest shadow-[4px_4px_0px_#E5E2E1] border-2 border-surface active:shadow-none active:translate-x-1 active:translate-y-1 transition-all"
+                    >
+                      НАЗАД
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex((i) => (i + 1) % items.length)}
+                      className="px-8 py-4 bg-primary-container text-on-primary-container font-headline font-bold uppercase tracking-widest shadow-[4px_4px_0px_#E5E2E1] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all"
+                    >
+                      ДАЛЕЕ
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,4 +307,4 @@ export default function ChapterOne() {
         </section>
       </main>
     );
-  }
+}
