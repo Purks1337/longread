@@ -37,34 +37,13 @@ export default function ChapterFour() {
           </div>
         </section>
   
-        {/* Industrial Content Block */}
+        {/* Content Block */}
         <section className="mb-40 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-          <div className="order-2 md:order-1">
-            <div className="space-y-8 text-xl font-body leading-relaxed text-on-surface/90">
+          <div className="order-2 md:order-1 md:col-span-2">
+            <div className="space-y-8 text-xl font-body leading-relaxed text-on-surface/90 max-w-4xl">
               <p>
-                Современная сцена театра оперы и балета представляет собой сложнейший технический комплекс. Это десятки лебедок, подвижных платформ, подъемных механизмов и систем освещения, которые позволяют мгновенно менять декорации и создавать невероятные визуальные эффекты.
+                Сложные механизмы сцены позволяют мгновенно менять декорации, создавать волшебные превращения и поддерживать динамику действия, а инспектор оперы координирует работу всех служб, следит за точностью репетиционного процесса и соблюдением художественных стандартов. Благодаря их труду каждый спектакль проходит безупречно, а зритель может полностью погрузиться в магию театра.
               </p>
-              <p className="font-bold text-on-surface">
-                Все эти механизмы работают как единый организм, но их безупречное функционирование зависит от профессионализма людей, которые управляют этой мощью.
-              </p>
-            </div>
-            <div className="mt-12">
-              <button className="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold uppercase tracking-tighter shadow-[4px_4px_0px_#e5e2e1] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
-                ИЗУЧИТЬ СТРУКТУРУ
-              </button>
-            </div>
-          </div>
-          <div className="order-1 md:order-2 relative h-[500px] bg-surface-container-lowest overflow-hidden border-2 border-primary-container/20">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-transparent"></div>
-            <img 
-              className="w-full h-full object-cover mix-blend-overlay" 
-              alt="Техника сцены" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXaRmiB2nLjCxoYlZNcDdWQNqH9202b5QWHg3qrghGOqu4jSlnL6ZcQe3mw_iXvQObOXfOeJ_H_XwO2hI8pgdA5HpKUes5ov-6CuZ8lLMOPVvfI4RjAwd7eDXZXT9cO5kjF6TKl0t7-vdGI9L0NhSGMg5yQw7fU9P-bf-8B3mtGOoltNtHiK_na-YmM9Y-cnY0Dg-KKCWbnUp99SxiqciIGWvNVyiOXbnbjAMmaaKbIK9xjRPXnxY2GprHqmwXRE9NRO0Bp_82C9Q" 
-            />
-            <div className="absolute bottom-6 right-6 text-right">
-              <div className="text-5xl font-black font-headline text-primary-container leading-none italic uppercase">
-                ИНДУСТРИАЛЬНЫЙ<br />ФАКТОР
-              </div>
             </div>
           </div>
         </section>

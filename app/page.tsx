@@ -52,68 +52,20 @@ export default function Home() {
 
             {/* CTA Button */}
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="bg-primary-container text-on-primary-container px-8 py-4 font-headline font-black uppercase tracking-tighter text-lg shadow-[4px_4px_0px_#E5E2E1] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
+              <a
+                href="/chapter-1"
+                className="bg-primary-container text-on-primary-container px-8 py-4 font-headline font-black uppercase tracking-tighter text-lg shadow-[4px_4px_0px_#E5E2E1] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all inline-block"
+              >
                 ЧИТАТЬ ПОЛНОСТЬЮ
-              </button>
-              <button className="border-b-2 border-primary-container text-primary-container px-6 py-4 font-headline font-bold uppercase tracking-tighter hover:bg-primary-container hover:text-on-primary-container transition-colors">
-                СМОТРЕТЬ ГАЛЕРЕЮ
-              </button>
+              </a>
+
             </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="font-headline text-xs font-bold uppercase tracking-[0.5em] text-primary-container mb-2">
-            ЛИСТАЙТЕ ВНИЗ
-          </span>
-          <span className="material-symbols-outlined text-primary-container">expand_more</span>
-        </div>
+
       </section>
 
-      {/* Secondary Content Section (Bento Style) */}
-      <section className="bg-surface py-24 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Large Feature Card */}
-          <div className="md:col-span-8 bg-surface-container brutalist-shadow p-8 flex flex-col justify-between min-h-[500px] relative overflow-hidden group">
-            <img
-              className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity grayscale group-hover:grayscale-0"
-              alt="крупный план вышивки театрального костюма золотыми нитями"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJeeAeKfRWgS3UzuyzKmNGuV2pRddQmF2yr964FlPsGdrYqX3kfo3AWD-eErfdEt51CJfndowvppDVpI3-EiH-K1jr7dar6fNTu0jH-c7cwxCP78xdeM5VfKuyJtddWC1Wo3rqmgmIV_N6WVQT3faGMy5hsjm1h_t245twTC6_l8tcqU9TGGkUW_5vTosJIkNauc85LZZPEubmaumeGe4h3l7XG8n0s9wwUF_n3PhI4TWsg6272zm6PffTNL4qTniRzqR5KfBYCMQ"
-            />
-            <div className="relative z-10">
-              <span className="bg-primary-container text-on-primary-container font-headline text-xs px-2 py-1 uppercase font-black mb-4 inline-block">
-                ГЛАВА 01
-              </span>
-              <h3 className="text-4xl md:text-6xl font-headline font-black uppercase leading-none tracking-tighter mb-4">
-                БАГРОВЫЙ<br />ЗАНАВЕС
-              </h3>
-            </div>
-            <div className="relative z-10 flex justify-between items-end">
-              <p className="max-w-md font-body text-lg italic opacity-80">
-                «Первый вдох театра — это сценическая пыль и аромат истории».
-              </p>
-              <span className="material-symbols-outlined text-primary-container text-5xl">arrow_right_alt</span>
-            </div>
-          </div>
-
-          {/* Vertical Card */}
-          <div className="md:col-span-4 bg-primary-container p-8 shadow-[4px_4px_0px_#E5E2E1] flex flex-col justify-center items-center text-center">
-            <span 
-              className="material-symbols-outlined text-on-primary-container text-7xl mb-6" 
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              theater_comedy
-            </span>
-            <h4 className="font-headline font-black text-3xl text-on-primary-container uppercase leading-none mb-4">
-              ЗА КУЛИСАМИ
-            </h4>
-            <p className="font-body text-on-primary-container/80 text-lg">
-              Честные интервью с мастерами, которые создают магию.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+         </main>
   );
 }

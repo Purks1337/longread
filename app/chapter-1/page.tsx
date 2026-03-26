@@ -239,11 +239,6 @@ export default function ChapterOne() {
                 ВИДЕО №1
               </div>
             </div>
-            <div className="md:col-span-4 pl-0 md:pl-12">
-              <h4 className="font-headline font-black text-4xl uppercase leading-none mb-6">ВЗГЛЯД ИЗНУТРИ</h4>
-              <p className="font-body text-xl italic mb-6">Редкие кадры репетиций и интервью с ведущими мастерами сцены, сохранившиеся в архивах ГТРК.</p>
-              <div className="h-1 w-20 bg-primary-container"></div>
-            </div>
           </div>
         </section>
   
