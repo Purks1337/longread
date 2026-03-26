@@ -36,18 +36,14 @@ export default function ChapterFive() {
       {/* Видео №5 */}
       <section className="max-w-7xl mx-auto px-6 mb-32">
         <div className="bg-surface-container-highest brutalist-shadow relative group cursor-pointer overflow-hidden aspect-video border-4 border-[#131313]">
-          <img 
-            className="w-full h-full object-cover opacity-60 grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" 
-            alt="Выступление оперного певца на сцене" 
-            src="https://images.unsplash.com/photo-1507676184212-d0330a15183c?q=80&w=2000&auto=format&fit=crop" 
+          <video
+            className="w-full h-full object-cover"
+            src="/materials/Видео/Видео №5.mp4"
+            controls
+            preload="metadata"
+            playsInline
+            poster="/materials/фоторепортаж/герои/Мария Шляпникова.JPG"
           />
-          <div className="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors duration-500"></div>
-          
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 bg-primary-container text-on-primary-container flex items-center justify-center shadow-[8px_8px_0px_#e5e2e1] group-hover:scale-110 transition-transform">
-              <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
-            </div>
-          </div>
           <div className="absolute top-6 left-6 bg-surface px-4 py-2 font-headline font-black text-primary-container text-2xl uppercase tracking-tighter border-l-4 border-primary-container">
             ВИДЕО №5
           </div>
@@ -76,11 +72,11 @@ export default function ChapterFive() {
               <div className="polaroid-tape !-rotate-2 z-10"></div>
               <div className="bg-on-surface p-3 pb-12 shadow-2xl transform rotate-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" 
+                  src="/materials/фоторепортаж/герои/Мария Шляпникова 2.JPG" 
                   alt="Мария Шляпникова" 
                   className="w-full aspect-[3/4] object-cover grayscale contrast-125"
                 />
-                <p className="mt-4 font-body text-surface font-bold text-center italic">В гримерке, 2024</p>
+                
               </div>
             </div>
           </div>

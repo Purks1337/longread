@@ -10,6 +10,7 @@ type TimelineItem = {
   period: string;
   description: string;
   photoLabel: string;
+  photoSrc: string;
 };
 
 export default function ChapterOne() {
@@ -23,6 +24,7 @@ export default function ChapterOne() {
         description:
           "Идея строительства каменного здания театра возникла после пожара деревянного театра-цирка. Проект был утвержден в 1910 году, а уже 12 октября 1912 года состоялась торжественная премьера — опера М. И. Глинки «Жизнь за царя» («Иван Сусанин»).",
         photoLabel: "Фото 1",
+        photoSrc: "/materials/фоторепортаж/История Театра/1.jpg",
       },
       {
         id: "altschuller-barbini-1912-1913",
@@ -32,6 +34,7 @@ export default function ChapterOne() {
         description:
           "Первым главным режиссером театра стал Александр Альтшуллер, а главным дирижером - известный итальянец Сильвио Барбини. К сожалению, через год - 18 октября 1913 года - Барбини умер от остановки сердца и был похоронен на екатеринбургском кладбище. Интересно, что свою трудовую деятельность на должности рассыльного оперного театра начинал 9-летний Григорий Александров - будущий режиссер известных советских музыкальных комедий.",
         photoLabel: "Фото 2",
+        photoSrc: "/materials/фоторепортаж/История Театра/2 Александр Альтшуллер.jpg",
       },
       {
         id: "soviet-return-1919-1924",
@@ -41,6 +44,7 @@ export default function ChapterOne() {
         description:
           "После бурь революции, затрагивавших театр, в советское время (с 1919 года) театр вновь стал выполнять свою культурную роль. В нем по-прежнему ставились оперы и балет. В 1922 году была создана балетная труппа. Её первым спектаклем стала «Коппелия» французского композитора Лео Делиба. Дровяную площадь, на которой стоял театр, после установления советской власти переименовали в площадь Парижской Коммуны. С 1924 года эта обитель культуры называется Государственным оперным театром имени А.В. Луначарского.",
         photoLabel: "Фото 3",
+        photoSrc: "/materials/фоторепортаж/История Театра/3.jpg",
       },
       {
         id: "ww2-1939-1945",
@@ -50,6 +54,7 @@ export default function ChapterOne() {
         description:
           "Театр не прекращал работу даже в трудные годы Великой Отечественной войны. Часть коллектива ушла на фронт, а остальные работали без выходных. За пять военных лет они дали более 4 тысяч спектаклей: в городе, на фронтах, в госпиталях. На заработанные выступлениями деньги коллектив театра купил для фронта три танка, а также совершал перечисления в фонд обороны.",
         photoLabel: "Фото 4",
+        photoSrc: "/materials/фоторепортаж/История Театра/4.jpg",
       },
       {
         id: "soviet-1920s-ww2",
@@ -59,6 +64,7 @@ export default function ChapterOne() {
         description:
           "Советский период: В 1920–30-е годы театр стал центром классического репертуара. В годы Великой Отечественной войны здесь выступали артисты эвакуированного Большого театра СССР, включая Майю Плисецкую.",
         photoLabel: "Фото 5",
+        photoSrc: "/materials/фоторепортаж/История Театра/5.jpg",
       },
       {
         id: "awards-reconstruction-1946-1987",
@@ -68,6 +74,7 @@ export default function ChapterOne() {
         description:
           "В 1946 и 1987 году театр удостаивался Государственной премии СССР. В 1962 году он был награждён орденом Трудового Красного Знамени. В 1966 году театр стал академическим. В конце 1970-х была выполнена реконструкция театра. Он был значительно расширен за счет заднего пристроя.",
         photoLabel: "Фото 6",
+        photoSrc: "/materials/фоторепортаж/История Театра/6.jpg",
       },
       {
         id: "jubilee-2011-2012",
@@ -77,6 +84,7 @@ export default function ChapterOne() {
         description:
           "К юбилею Оперного театра в 2011-12 гг. была проведена реконструкция, в ходе которой строители постарались вернуть театру его исторический облик. Главной премьерой юбилейного 100-го сезона театра стала опера М.Мусоргского «Борис Годунов».",
         photoLabel: "Фото 7",
+        photoSrc: "/materials/фоторепортаж/История Театра/7.jpg",
       },
     ],
     []
@@ -176,17 +184,12 @@ export default function ChapterOne() {
               {/* Active Content Detail */}
               <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-0 border-4 border-primary-container shadow-[12px_12px_0px_#D91E12]">
                 <div className="relative h-[400px] bg-surface-container overflow-hidden">
-                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(217,30,18,0.20),rgba(0,0,0,0.65))]"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="font-headline font-black text-6xl md:text-7xl tracking-tighter text-[#E5E2E1] mix-blend-screen">
-                        {active.photoLabel}
-                      </div>
-                      <div className="mt-3 font-headline font-bold uppercase tracking-widest text-[#E5E2E1]/70 text-sm">
-                        Архивный материал
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    className="w-full h-full object-cover grayscale contrast-125 brightness-75 mix-blend-luminosity"
+                    alt={active.title}
+                    src={active.photoSrc}
+                  />
+                  <div className="absolute inset-0 bg-primary-container/20"></div>
                   <div className="absolute bottom-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 text-xs font-headline font-bold uppercase">
                     {active.photoLabel}
                   </div>
@@ -221,18 +224,16 @@ export default function ChapterOne() {
         {/* Video Block */}
         <section className="max-w-7xl mx-auto px-6 py-24">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-8 relative group cursor-pointer">
+            <div className="md:col-span-8 relative">
               <div className="aspect-video bg-surface shadow-[12px_12px_0px_#D91E12] border-2 border-[#131313] relative overflow-hidden">
-                <img 
-                  className="w-full h-full object-cover grayscale opacity-50 group-hover:scale-105 group-hover:opacity-70 transition-all duration-500" 
-                  alt="Video thumbnail" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT0vzAPPKYJ1AElZ3qUhh4s4bb78OOV0RhHEQpipTF6aJGsCMWEPlidYnZtTt_TXMISHR_vTSISpZT7xgWLb2eRnEL4AAOL-VZGnw2RHuUtNX6v9vq5DKKsDRjoYWZRFf2F73Ee3L3MIVkzgsgodJg0GQpsrgk-T3WVh-UBxUOaCz8VTXDAZT_4iMGTbXoezvwMW5I8tIwDdykawKIrvwBUGNI-T3HR2K4Mx_E2A9Xfurns_Sn1LGAVjEgCNrXuLuThu78DwdXdJY"
+                <video
+                  className="w-full h-full object-cover"
+                  src="/materials/Видео/Видео №1.mp4"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster="/materials/фоторепортаж/История Театра/1.jpg"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full border-4 border-primary-container flex items-center justify-center bg-surface/80 group-hover:bg-primary-container transition-colors group-hover:scale-110 duration-300">
-                    <span className="material-symbols-outlined text-primary-container group-hover:text-on-primary-container text-5xl translate-x-1" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
-                  </div>
-                </div>
                 <div className="absolute top-0 left-0 w-full h-full border-[20px] border-surface pointer-events-none opacity-20"></div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary-container text-on-primary-container px-6 py-3 font-headline font-black text-2xl uppercase italic">
@@ -250,53 +251,33 @@ export default function ChapterOne() {
                 <span className="font-headline font-bold text-primary-container uppercase tracking-widest block mb-2">ВЫСТАВКА</span>
                 <h2 className="font-headline font-black text-6xl uppercase tracking-tighter">Галерея "Музей"</h2>
               </div>
-              <div className="hidden md:block font-body text-xl italic opacity-60">Куратор: Е. Кокшарова</div>
+              <div className="hidden md:block font-body text-xl italic opacity-60">Фото_Екатерина Кокшарова</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {/* Gallery Item 1 */}
-              <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface-container">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 hover:scale-105" 
-                  alt="Museum artifact" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnFkUC4FT7OX6YSlgbuZhhYgbqbs1-9yAYTqGlp2L-J5VNuPLOQgtPNrtPDaRL312pvVP3tll16l1I3aO1NfkEXrTOHRaimyHqKJTwpBHyR3mJqM0mQJrQjPtxr8_SjUE1RCLyVq0p-FR0UAyisWWHBdIwHHkVldaWhYQ3NNHPsDymqX53mLnMRcbsu3ZJwKyg_3eXydiRW1wCIfyHbjrrr4u5uXgmH3AI3CmxqFwD70oOwQyQpt9FaFhqVNAqvxjCdhC61ah_ZVI"
-                />
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent">
-                  <p className="font-headline text-xs font-bold uppercase tracking-widest text-primary-container">Фото_Екатерина Кокшарова</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                "1.JPG",
+                "2.JPG",
+                "3.JPG",
+                "4.JPG",
+                "5.JPG",
+                "6.JPG",
+                "7.JPG",
+              ].map((file, idx) => (
+                <div
+                  key={file}
+                  className="relative group overflow-hidden bg-surface-container aspect-square border border-[#E5E2E1]/10"
+                >
+                  <img
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    alt={`Музей — фото ${idx + 1}`}
+                    src={`/materials/фоторепортаж/музей/${file}`}
+                    loading="lazy"
+                  />
                 </div>
-              </div>
-              {/* Gallery Item 2 */}
-              <div className="relative group overflow-hidden bg-surface-container aspect-square md:aspect-auto">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-                  alt="Museum artifact" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvGNKEYFzQlvZ_wjJ183bf-1q366557PJIUD9BAv4zi9-yXVXe-wVFOy4P7cLyvCZ8OalblHZohTuWI0yu9BOjJWsob2-eQnWGBAaecZfJzsy1i5wnvewpxNBa06ommkgI4uxsjIDSHmImOEAxP0CqzXOZW9_snFe-PvD3IPnpb3ooTQiQhVgQC37GAieJo4q-P_NjS8dph1BXgQqD9pwfpCQ3SfwTnPuISjhy41f2be_fS8psK-oQOXhGt0dZsRuc-y0fkZDJARQ"
-                />
-                <div className="absolute bottom-0 left-0 w-full p-4">
-                  <p className="font-headline text-[10px] font-bold uppercase tracking-widest text-primary-container">Фото_Екатерина Кокшарова</p>
-                </div>
-              </div>
-              {/* Gallery Item 3 */}
-              <div className="relative group overflow-hidden bg-surface-container aspect-square md:aspect-auto">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-                  alt="Museum artifact" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAahXLsS6oXMmuwFuJHXgfoyaMLNbUzAK1sWBOeI4MInb_JuCzOBuzGv24hSTU18OU3ixO5V8I4VKW3486u0AgEPXaJCdMkK4rybal4YAOL6qVu62gQHth4JBejkNjCmSgrjsG5i5Ykg266GUrglUAx_Gg6voHJBVxh7z-35zBZipWX1O5rivE-QDUP5BSad3RW5XSoehH1RcbJoP0I0VFLglKZT3jF5NSVlxln-wAWb5o5zI-uaHg1TG380P6rMVnfE2VGDRgrcNM"
-                />
-                <div className="absolute bottom-0 left-0 w-full p-4">
-                  <p className="font-headline text-[10px] font-bold uppercase tracking-widest text-primary-container">Фото_Екатерина Кокшарова</p>
-                </div>
-              </div>
-              {/* Gallery Item 4 */}
-              <div className="md:col-span-2 relative group overflow-hidden bg-surface-container h-[300px]">
-                <img 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-                  alt="Museum artifact" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0VEHj9pNGLhSCIRfr4bvVADxaQZDM2_7n9MVkl50sEpv43yM2xrFxxoTd0BgMgnzMgw_zVr_Ajb7MFUqO2mhXQLsuAy9BLp1YXU6eHzbFwK1qkiobwZ0h70Yikkm9gtq5rirav9uXrj2dcv_vc_KZSBbyR3zd2Z6obNM0gkxAcD3F5ksQvK2o0Be7G-nXnarAvFXSus5TubeEEixiaT4qfzdUvZikPzk-_L4RGTzLZ8YWsV5AIrOBWZetiVy45RlvDkHa3d1Dn98"
-                />
-                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black to-transparent">
-                  <p className="font-headline text-xs font-bold uppercase tracking-widest text-primary-container">Фото_Екатерина Кокшарова</p>
-                </div>
-              </div>
+              ))}
+            </div>
+            <div className="mt-10 font-body text-sm italic opacity-70">
+              Фото_Екатерина Кокшарова
             </div>
           </div>
         </section>

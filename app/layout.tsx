@@ -6,13 +6,13 @@ import Footer from "../components/Footer";
 
 // Исправлены веса: оставлены только те, что существуют
 const spaceGrotesk = Space_Grotesk({ 
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   variable: '--font-space',
   weight: ['300', '400', '500', '600', '700']
 });
 
 const newsreader = Newsreader({ 
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   variable: '--font-newsreader',
   style: ['normal', 'italic']
 });
