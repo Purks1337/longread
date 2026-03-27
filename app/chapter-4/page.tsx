@@ -23,14 +23,13 @@ export default function ChapterFour() {
               </div>
               <div className="md:col-span-5 relative">
                 <div className="bg-surface-container-high p-4 shadow-[12px_12px_0px_#D91E12] transform rotate-2">
-                  <img 
-                    className="w-full h-80 object-cover grayscale contrast-125" 
-                    alt="Машинерия сцены" 
-                    src="/materials/фоторепортаж/закулисье/1.JPG" 
-                  />
-                  <div className="mt-4 font-label text-xs uppercase opacity-50 tracking-tighter">
-                    КОД_ССЫЛКИ: 404_BACKSTAGE_MECHANICS
-                  </div>
+                  <a href="/materials/фоторепортаж/закулисье/1.JPG" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      className="w-full h-80 object-cover grayscale contrast-125" 
+                      alt="Машинерия сцены" 
+                      src="/materials/фоторепортаж/закулисье/1.JPG" 
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -57,12 +56,12 @@ export default function ChapterFour() {
                 allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
                 className="absolute top-0 left-0 w-full h-full border-0"
                 allowFullScreen
-                title="Видео №4"
+                title="Сюжет"
               />
             </div>
             <div className="absolute top-8 left-8">
               <h3 className="text-4xl font-black font-headline uppercase bg-surface p-2 border-l-4 border-primary-container">
-                ВИДЕО №4
+                СЮЖЕТ
               </h3>
             </div>
           </div>
@@ -82,11 +81,13 @@ export default function ChapterFour() {
             <div className="relative pt-10">
               <div className="polaroid-tape"></div>
               <div className="bg-on-surface p-3 pb-12 shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                <img 
-                  className="w-full h-64 object-cover grayscale" 
-                  alt="Закулисье 1" 
-                  src="/materials/фоторепортаж/закулисье/3.JPG" 
-                />
+                <a href="/materials/фоторепортаж/закулисье/3.JPG" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    className="w-full h-64 object-cover grayscale" 
+                    alt="Закулисье 1" 
+                    src="/materials/фоторепортаж/закулисье/3.JPG" 
+                  />
+                </a>
                 <p className="mt-4 font-body text-surface font-bold text-center italic">Момент #01</p>
               </div>
             </div>
@@ -95,11 +96,13 @@ export default function ChapterFour() {
             <div className="relative pt-10">
               <div className="polaroid-tape !rotate-3"></div>
               <div className="bg-on-surface p-3 pb-12 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                <img 
-                  className="w-full h-64 object-cover grayscale" 
-                  alt="Закулисье 2" 
-                  src="/materials/фоторепортаж/закулисье/4.JPG" 
-                />
+                <a href="/materials/фоторепортаж/закулисье/4.JPG" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    className="w-full h-64 object-cover grayscale" 
+                    alt="Закулисье 2" 
+                    src="/materials/фоторепортаж/закулисье/4.JPG" 
+                  />
+                </a>
                 <p className="mt-4 font-body text-surface font-bold text-center italic">Момент #02</p>
               </div>
             </div>
@@ -108,11 +111,13 @@ export default function ChapterFour() {
             <div className="relative pt-10">
               <div className="polaroid-tape !-rotate-1"></div>
               <div className="bg-on-surface p-3 pb-12 shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-                <img 
-                  className="w-full h-64 object-cover grayscale" 
-                  alt="Закулисье 3" 
-                  src="/materials/фоторепортаж/закулисье/5.JPG" 
-                />
+                <a href="/materials/фоторепортаж/закулисье/5.JPG" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    className="w-full h-64 object-cover grayscale" 
+                    alt="Закулисье 3" 
+                    src="/materials/фоторепортаж/закулисье/5.JPG" 
+                  />
+                </a>
                 <p className="mt-4 font-body text-surface font-bold text-center italic">Момент #03</p>
               </div>
             </div>
@@ -121,11 +126,13 @@ export default function ChapterFour() {
             <div className="relative pt-10">
               <div className="polaroid-tape !rotate-6"></div>
               <div className="bg-on-surface p-3 pb-12 shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300">
-                <img 
-                  className="w-full h-64 object-cover grayscale" 
-                  alt="Закулисье 4" 
-                  src="/materials/фоторепортаж/закулисье/6.JPG" 
-                />
+                <a href="/materials/фоторепортаж/закулисье/6.JPG" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    className="w-full h-64 object-cover grayscale" 
+                    alt="Закулисье 4" 
+                    src="/materials/фоторепортаж/закулисье/6.JPG" 
+                  />
+                </a>
                 <p className="mt-4 font-body text-surface font-bold text-center italic">Момент #04</p>
               </div>
             </div>

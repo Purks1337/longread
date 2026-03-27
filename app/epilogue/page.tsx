@@ -59,16 +59,15 @@ export default function Epilogue() {
           </div>
         </div>
 
-        {/* Ссылки (Партнеры/Логотипы) */}
+        {/* Ссылки (Логотипы) */}
         <div className="border-t-2 border-primary-container/20 pt-16">
-          <h4 className="font-headline text-xl font-bold uppercase tracking-widest mb-8">Партнеры и ресурсы:</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {partners.map((p, i) => (
               <Link
                 key={p.name}
                 href={p.url}
                 target="_blank"
-                className="group flex items-center gap-5 bg-surface-container-high/60 backdrop-blur border border-primary-container/20 p-5 brutalist-shadow hover:border-primary-container/60 transition-colors"
+                className={`group flex items-center gap-5 bg-surface-container-high/60 backdrop-blur border border-primary-container/20 p-5 brutalist-shadow hover:border-primary-container/60 transition-colors ${i === partners.length - 1 ? "md:col-span-2 md:max-w-xl md:mx-auto w-full" : ""}`}
               >
                 <div className="w-16 h-16 bg-surface flex items-center justify-center border border-primary-container/20">
                   <img src={p.logo} alt={p.name} className="max-h-10 w-auto object-contain grayscale group-hover:grayscale-0 transition" />

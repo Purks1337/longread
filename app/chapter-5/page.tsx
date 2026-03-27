@@ -42,11 +42,11 @@ export default function ChapterFive() {
               allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
               className="absolute top-0 left-0 w-full h-full border-0"
               allowFullScreen
-              title="Видео №5"
+              title="Сюжет"
             />
           </div>
           <div className="absolute top-6 left-6 bg-surface px-4 py-2 font-headline font-black text-primary-container text-2xl uppercase tracking-tighter border-l-4 border-primary-container">
-            ВИДЕО №5
+            СЮЖЕТ
           </div>
         </div>
       </section>
@@ -72,11 +72,13 @@ export default function ChapterFive() {
             <div className="relative pt-8">
               <div className="polaroid-tape !-rotate-2 z-10"></div>
               <div className="bg-on-surface p-3 pb-12 shadow-2xl transform rotate-2">
-                <img 
-                  src="/materials/фоторепортаж/герои/Мария Шляпникова 2.JPG" 
-                  alt="Мария Шляпникова" 
-                  className="w-full aspect-[3/4] object-cover grayscale contrast-125"
-                />
+                <a href="/materials/фоторепортаж/герои/Мария Шляпникова 2.JPG" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src="/materials/фоторепортаж/герои/Мария Шляпникова 2.JPG" 
+                    alt="Мария Шляпникова" 
+                    className="w-full aspect-[3/4] object-cover grayscale contrast-125"
+                  />
+                </a>
                 
               </div>
             </div>

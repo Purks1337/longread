@@ -32,11 +32,11 @@ export default function ChapterTwo() {
                     allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
                     className="absolute top-0 left-0 w-full h-full border-0"
                     allowFullScreen
-                    title="Видео №2"
+                    title="Сюжет"
                   />
                 </div>
                 <div className="absolute bottom-4 left-4 bg-surface px-4 py-2 font-headline font-bold text-primary-container uppercase tracking-tighter">
-                  Видеo №2
+                  СЮЖЕТ
                 </div>
               </div>
             </div>
@@ -46,12 +46,14 @@ export default function ChapterTwo() {
               <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
                 {["1.JPG", "2.JPG", "3.JPG", "4.JPG", "5.JPG"].map((file, idx) => (
                   <div key={file} className="brutalist-shadow bg-surface-container overflow-hidden aspect-square">
-                    <img
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                      alt={`Оркестровая яма — фото ${idx + 1}`}
-                      src={`/materials/фоторепортаж/Оркестровая яма/${file}`}
-                      loading="lazy"
-                    />
+                    <a href={`/materials/фоторепортаж/Оркестровая яма/${file}`} target="_blank" rel="noopener noreferrer">
+                      <img
+                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        alt={`Оркестровая яма — фото ${idx + 1}`}
+                        src={`/materials/фоторепортаж/Оркестровая яма/${file}`}
+                        loading="lazy"
+                      />
+                    </a>
                   </div>
                 ))}
               </div>
@@ -102,12 +104,12 @@ export default function ChapterTwo() {
                         allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
                         className="absolute top-0 left-0 w-full h-full border-0"
                         allowFullScreen
-                        title="Видео №3"
+                        title="Сюжет"
                       />
                     </div>
                     <div className="absolute top-0 right-0 p-4">
                       <div className="bg-primary-container text-on-primary-container px-6 py-2 font-headline font-black text-xl uppercase tracking-tighter shadow-lg">
-                        ВИДЕО №3
+                        СЮЖЕТ
                       </div>
                     </div>
                   </div>
@@ -115,25 +117,6 @@ export default function ChapterTwo() {
               </div>
             </div>
             
-            {/* Structural Grid Element */}
-            <div className="mt-32 border-t-8 border-surface pt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="space-y-4">
-                <div className="text-primary-container font-headline font-black text-4xl">01.</div>
-                <div className="font-headline font-bold uppercase text-sm tracking-widest">ДРАМАТУРГИЯ</div>
-              </div>
-              <div className="space-y-4">
-                <div className="text-primary-container font-headline font-black text-4xl">02.</div>
-                <div className="font-headline font-bold uppercase text-sm tracking-widest">ВЗАИМОДЕЙСТВИЕ</div>
-              </div>
-              <div className="space-y-4">
-                <div className="text-primary-container font-headline font-black text-4xl">03.</div>
-                <div className="font-headline font-bold uppercase text-sm tracking-widest">АТМОСФЕРА</div>
-              </div>
-              <div className="space-y-4">
-                <div className="text-primary-container font-headline font-black text-4xl">04.</div>
-                <div className="font-headline font-bold uppercase text-sm tracking-widest">ИНТЕРПРЕТАЦИЯ</div>
-              </div>
-            </div>
           </div>
         </section>
       </main>

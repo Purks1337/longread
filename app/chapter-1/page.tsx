@@ -9,7 +9,6 @@ type TimelineItem = {
   title: string;
   period: string;
   description: string;
-  photoLabel: string;
   photoSrc: string;
 };
 
@@ -23,7 +22,6 @@ export default function ChapterOne() {
         title: "Основание и строительство (1910–1912)",
         description:
           "Идея строительства каменного здания театра возникла после пожара деревянного театра-цирка. Проект был утвержден в 1910 году, а уже 12 октября 1912 года состоялась торжественная премьера — опера М. И. Глинки «Жизнь за царя» («Иван Сусанин»).",
-        photoLabel: "Фото 1",
         photoSrc: "/materials/фоторепортаж/История Театра/1.jpg",
       },
       {
@@ -33,7 +31,6 @@ export default function ChapterOne() {
         title: "Первые имена: режиссёр и дирижёр",
         description:
           "Первым главным режиссером театра стал Александр Альтшуллер, а главным дирижером - известный итальянец Сильвио Барбини. К сожалению, через год - 18 октября 1913 года - Барбини умер от остановки сердца и был похоронен на екатеринбургском кладбище. Интересно, что свою трудовую деятельность на должности рассыльного оперного театра начинал 9-летний Григорий Александров - будущий режиссер известных советских музыкальных комедий.",
-        photoLabel: "Фото 2",
         photoSrc: "/materials/фоторепортаж/История Театра/2 Александр Альтшуллер.jpg",
       },
       {
@@ -43,7 +40,6 @@ export default function ChapterOne() {
         title: "Возвращение культурной роли (1919–1924)",
         description:
           "После бурь революции, затрагивавших театр, в советское время (с 1919 года) театр вновь стал выполнять свою культурную роль. В нем по-прежнему ставились оперы и балет. В 1922 году была создана балетная труппа. Её первым спектаклем стала «Коппелия» французского композитора Лео Делиба. Дровяную площадь, на которой стоял театр, после установления советской власти переименовали в площадь Парижской Коммуны. С 1924 года эта обитель культуры называется Государственным оперным театром имени А.В. Луначарского.",
-        photoLabel: "Фото 3",
         photoSrc: "/materials/фоторепортаж/История Театра/3.jpg",
       },
       {
@@ -53,7 +49,6 @@ export default function ChapterOne() {
         title: "Театр в годы Великой Отечественной войны",
         description:
           "Театр не прекращал работу даже в трудные годы Великой Отечественной войны. Часть коллектива ушла на фронт, а остальные работали без выходных. За пять военных лет они дали более 4 тысяч спектаклей: в городе, на фронтах, в госпиталях. На заработанные выступлениями деньги коллектив театра купил для фронта три танка, а также совершал перечисления в фонд обороны.",
-        photoLabel: "Фото 4",
         photoSrc: "/materials/фоторепортаж/История Театра/4.jpg",
       },
       {
@@ -63,7 +58,6 @@ export default function ChapterOne() {
         title: "Советский период: репертуар и эвакуация",
         description:
           "Советский период: В 1920–30-е годы театр стал центром классического репертуара. В годы Великой Отечественной войны здесь выступали артисты эвакуированного Большого театра СССР, включая Майю Плисецкую.",
-        photoLabel: "Фото 5",
         photoSrc: "/materials/фоторепортаж/История Театра/5.jpg",
       },
       {
@@ -73,7 +67,6 @@ export default function ChapterOne() {
         title: "Премии, орден, статус и реконструкция",
         description:
           "В 1946 и 1987 году театр удостаивался Государственной премии СССР. В 1962 году он был награждён орденом Трудового Красного Знамени. В 1966 году театр стал академическим. В конце 1970-х была выполнена реконструкция театра. Он был значительно расширен за счет заднего пристроя.",
-        photoLabel: "Фото 6",
         photoSrc: "/materials/фоторепортаж/История Театра/6.jpg",
       },
       {
@@ -83,7 +76,6 @@ export default function ChapterOne() {
         title: "Юбилей и возвращение исторического облика",
         description:
           "К юбилею Оперного театра в 2011-12 гг. была проведена реконструкция, в ходе которой строители постарались вернуть театру его исторический облик. Главной премьерой юбилейного 100-го сезона театра стала опера М.Мусоргского «Борис Годунов».",
-        photoLabel: "Фото 7",
         photoSrc: "/materials/фоторепортаж/История Театра/7.jpg",
       },
     ],
@@ -184,15 +176,14 @@ export default function ChapterOne() {
               {/* Active Content Detail */}
               <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-0 border-4 border-primary-container shadow-[12px_12px_0px_#D91E12]">
                 <div className="relative h-[400px] bg-surface-container overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover grayscale contrast-125 brightness-75 mix-blend-luminosity"
-                    alt={active.title}
-                    src={active.photoSrc}
-                  />
+                  <a href={active.photoSrc} target="_blank" rel="noopener noreferrer">
+                    <img
+                      className="w-full h-full object-cover grayscale contrast-125 brightness-75 mix-blend-luminosity"
+                      alt={active.title}
+                      src={active.photoSrc}
+                    />
+                  </a>
                   <div className="absolute inset-0 bg-primary-container/20"></div>
-                  <div className="absolute bottom-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 text-xs font-headline font-bold uppercase">
-                    {active.photoLabel}
-                  </div>
                 </div>
                 <div className="p-12 bg-surface flex flex-col justify-center">
                   <h3 className="font-headline font-black text-5xl uppercase tracking-tighter mb-6 leading-none">
@@ -232,13 +223,13 @@ export default function ChapterOne() {
                     allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
                     className="absolute top-0 left-0 w-full h-full border-0"
                     allowFullScreen
-                    title="Видео №1"
+                    title="Сюжет"
                   />
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full border-[20px] border-surface pointer-events-none opacity-20"></div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary-container text-on-primary-container px-6 py-3 font-headline font-black text-2xl uppercase italic">
-                ВИДЕО №1
+                СЮЖЕТ
               </div>
             </div>
           </div>
@@ -268,12 +259,14 @@ export default function ChapterOne() {
                   key={file}
                   className="relative group overflow-hidden bg-surface-container aspect-square border border-[#E5E2E1]/10"
                 >
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                    alt={`Музей — фото ${idx + 1}`}
-                    src={`/materials/фоторепортаж/музей/${file}`}
-                    loading="lazy"
-                  />
+                  <a href={`/materials/фоторепортаж/музей/${file}`} target="_blank" rel="noopener noreferrer">
+                    <img
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                      alt={`Музей — фото ${idx + 1}`}
+                      src={`/materials/фоторепортаж/музей/${file}`}
+                      loading="lazy"
+                    />
+                  </a>
                 </div>
               ))}
             </div>
